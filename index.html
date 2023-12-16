@@ -34,14 +34,17 @@
       border-top: none;
     }
 
+    .frame-container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100vw;
+      height: 100vh;
+    }
+
     .frame {
-      position: relative;
-      float: left;
-      height: 50vh;
-      width: 50vw;
-      background-color: #f0f0f0;
-      border: 1px solid #ccc;
-      overflow: hidden;
+      flex: 50%; /* Each frame takes up 50% of the width */
+      box-sizing: border-box;
+      padding: 4px; /* Adjust padding as needed */
     }
 
     .frame iframe {
@@ -62,20 +65,26 @@
 
   <!-- Page 1 content -->
   <div id="Page1" class="tabcontent">
-    <!-- 4 frames for Page 1 -->
-    <!-- Add iframe contents here -->
+    <div class="frame-container">
+      <!-- 4 frames for Page 1 -->
+      <!-- Add iframe contents here -->
+    </div>
   </div>
 
   <!-- Page 2 content -->
   <div id="Page2" class="tabcontent">
-    <!-- 4 frames for Page 2 -->
-    <!-- Add iframe contents here -->
+    <div class="frame-container">
+      <!-- 4 frames for Page 2 -->
+      <!-- Add iframe contents here -->
+    </div>
   </div>
 
   <!-- Page 3 content -->
   <div id="Page3" class="tabcontent">
-    <!-- 4 frames for Page 3 -->
-    <!-- Add iframe contents here -->
+    <div class="frame-container">
+      <!-- 4 frames for Page 3 -->
+      <!-- Add iframe contents here -->
+    </div>
   </div>
 
   <script>
