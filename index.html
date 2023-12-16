@@ -32,19 +32,14 @@
       padding: 6px 12px;
       border: 1px solid #ccc;
       border-top: none;
-    }
-
-    .frame-container {
-      display: flex;
-      flex-wrap: wrap;
       width: 100vw;
       height: 100vh;
     }
 
     .frame {
-      flex: 1;
+      float: left;
       width: 50%; /* 50% width for 2x2 grid */
-      height: 50vh; /* 50% height for 2x2 grid */
+      height: 50%; /* 50% height for 2x2 grid */
       box-sizing: border-box;
       padding: 4px;
     }
@@ -67,26 +62,28 @@
 
   <!-- Page 1 content -->
   <div id="Page1" class="tabcontent">
-    <div class="frame-container">
-      <div class="frame">
-        <iframe width="687" height="464" src="https://www.youtube.com/embed/b217WQb2WfM" title="Live From The Best Western / Jacksonville Beach Pier Cam" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-      <div class="frame">
-        <iframe loading="lazy" title="JAX" width="1200" height="675" src="https://www.youtube.com/embed/Iu2_v4M8n6Q?feature=oembed&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.surf-station.com" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" data-gtm-yt-inspected-52964878_50="true" id="30875323" data-gtm-yt-inspected-28="true"></iframe>
-      </div>
-      <div class="frame">
-        <iframe src="https://g1.ipcamlive.com/player/player.php?alias=plantationbeach&autoplay=1" allow="autoplay"></iframe>
-      </div>
-      <div class="frame">
-        <link href="//www.surf-forecast.com/stylesheets/widget.css" media="screen" rel="stylesheet" type="text/css" />
-        <div class="wf-width-cont surf-fc-widget">
-          <div class="widget-container">
-            <div class="external-cont">
-              <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Ponte-Vedra/forecasts/widget/i" scrolling="no" frameborder="0" marginwidth="0" marginheight="0"></iframe>
-              <div class="footer">
-                <a class="logo" href="//www.surf-forecast.com/"><img src="//www.surf-forecast.com/images/widget.png" width="1" height="1" /></a>
-                <div class="about" id="cmt">View detailed surf forecast for <a href="//www.surf-forecast.com/breaks/Ponte-Vedra">Ponte Vedra</a>. Visit <a href="//www.surf-forecast.com/breaks/Ponte-Vedra">surf-forecast.com</a> for more details, long-range forecasts, surf reports, swell and weather maps.</div>
-              </div>
+    <!-- Frame 1 -->
+    <div class="frame">
+      <iframe width="687" height="464" src="https://www.youtube.com/embed/b217WQb2WfM" title="Live From The Best Western / Jacksonville Beach Pier Cam" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <!-- Frame 2 -->
+    <div class="frame">
+      <iframe loading="lazy" title="JAX" width="1200" height="675" src="https://www.youtube.com/embed/Iu2_v4M8n6Q?feature=oembed&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.surf-station.com" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" data-gtm-yt-inspected-52964878_50="true" id="30875323" data-gtm-yt-inspected-28="true"></iframe>
+    </div>
+    <!-- Frame 3 -->
+    <div class="frame">
+      <iframe src="https://g1.ipcamlive.com/player/player.php?alias=plantationbeach&autoplay=1" allow="autoplay"></iframe>
+    </div>
+    <!-- Frame 4 -->
+    <div class="frame">
+      <link href="//www.surf-forecast.com/stylesheets/widget.css" media="screen" rel="stylesheet" type="text/css" />
+      <div class="wf-width-cont surf-fc-widget">
+        <div class="widget-container">
+          <div class="external-cont">
+            <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Ponte-Vedra/forecasts/widget/i" scrolling="no" frameborder="0" marginwidth="0" marginheight="0"></iframe>
+            <div class="footer">
+              <a class="logo" href="//www.surf-forecast.com/"><img src="//www.surf-forecast.com/images/widget.png" width="1" height="1" /></a>
+              <div class="about" id="cmt">View detailed surf forecast for <a href="//www.surf-forecast.com/breaks/Ponte-Vedra">Ponte Vedra</a>. Visit <a href="//www.surf-forecast.com/breaks/Ponte-Vedra">surf-forecast.com</a> for more details, long-range forecasts, surf reports, swell and weather maps.</div>
             </div>
           </div>
         </div>
@@ -96,30 +93,31 @@
 
   <!-- Page 2 content -->
   <div id="Page2" class="tabcontent">
-    <div class="frame-container">
-      <div class="frame">
-        <iframe src="https://www.nhc.noaa.gov/xgtwo/two_atl_7d0.png"></iframe>
-      </div>
-      <div class="frame">
-        <iframe src="https://wave.marineweather.net/itide/tides/png/fl_jacksonville_beach.png"></iframe>
-      </div>
-      <div class="frame">
-        <iframe src="https://embed.windy.com/embed2.html?lat=30.162209&amp;lon=-81.355365&amp;detailLat=29.847&amp;detailLon=-81.266&amp;zoom=8&amp;level=surface&amp;overlay=waves&amp;product=ecmwf&amp;menu=&amp;message=true&amp;marker=true&amp;calendar=24&amp;pressure=&amp;type=map&amp;location=coordinates&amp;detail=&amp;metricWind=mph&amp;metricTemp=%C2%B0F&amp;radarRange=-1" allow="autoplay"></iframe>
-      </div>
-      <div class="frame">
-        <iframe src="https://www.surf-station.com/#tabs-5" allow="autoplay" style="position:relative; top:-10%;"></iframe>
-      </div>
+    <!-- Frame 5 -->
+    <div class="frame">
+      <iframe src="https://www.nhc.noaa.gov/xgtwo/two_atl_7d0.png"></iframe>
+    </div>
+    <!-- Frame 6 -->
+    <div class="frame">
+      <iframe src="https://wave.marineweather.net/itide/tides/png/fl_jacksonville_beach.png"></iframe>
+    </div>
+    <!-- Frame 7 -->
+    <div class="frame">
+      <iframe src="https://embed.windy.com/embed2.html?lat=30.162209&amp;lon=-81.355365&amp;detailLat=29.847&amp;detailLon=-81.266&amp;zoom=8&amp;level=surface&amp;overlay=waves&amp;product=ecmwf&amp;menu=&amp;message=true&amp;marker=true&amp;calendar=24&amp;pressure=&amp;type=map&amp;location=coordinates&amp;detail=&amp;metricWind=mph&amp;metricTemp=%C2%B0F&amp;radarRange=-1" allow="autoplay"></iframe>
+    </div>
+    <!-- Frame 8 -->
+    <div class="frame">
+      <iframe src="https://www.surf-station.com/#tabs-5" allow="autoplay" style="position:relative; top:-10%;"></iframe>
     </div>
   </div>
 
   <!-- Page 3 content -->
   <div id="Page3" class="tabcontent">
-    <div class="frame-container">
-      <div class="frame">
-        <iframe src="https://embed.windy.com/embed2.html?lat=30.162209&amp;lon=-81.355365&amp;detailLat=29.847&amp;detailLon=-81.266&amp;zoom=8&amp;level=surface&amp;overlay=wind&amp;product=ecmwf&amp;menu=&amp;message=true&amp;marker=true&amp;calendar=24&amp;pressure=&amp;type=map&amp;location=coordinates&amp;detail=&amp;metricWind=mph&amp;metricTemp=%C2%B0F&amp;radarRange=-1" allow="autoplay"></iframe>
-      </div>
-      <!-- Additional frames can be added here -->
+    <!-- Frame 9 -->
+    <div class="frame">
+      <iframe src="https://embed.windy.com/embed2.html?lat=30.162209&amp;lon=-81.355365&amp;detailLat=29.847&amp;detailLon=-81.266&amp;zoom=8&amp;level=surface&amp;overlay=wind&amp;product=ecmwf&amp;menu=&amp;message=true&amp;marker=true&amp;calendar=24&amp;pressure=&amp;type=map&amp;location=coordinates&amp;detail=&amp;metricWind=mph&amp;metricTemp=%C2%B0F&amp;radarRange=-1" allow="autoplay"></iframe>
     </div>
+    <!-- Additional frames can be added here -->
   </div>
 
   <script>
