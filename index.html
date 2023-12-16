@@ -42,9 +42,11 @@
     }
 
     .frame {
-      flex: 50%; /* Each frame takes up 50% of the width */
+      flex: 1;
+      width: 50%; /* 50% width for 2x2 grid */
+      height: 50vh; /* 50% height for 2x2 grid */
       box-sizing: border-box;
-      padding: 4px; /* Adjust padding as needed */
+      padding: 4px;
     }
 
     .frame iframe {
@@ -64,7 +66,7 @@
   </div>
 
   <!-- Page 1 content -->
-  <div id="Surf Cams" class="tabcontent">
+  <div id="Page1" class="tabcontent">
     <div class="frame-container">
       <div class="frame">
         <iframe width="687" height="464" src="https://www.youtube.com/embed/b217WQb2WfM" title="Live From The Best Western / Jacksonville Beach Pier Cam" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -93,7 +95,7 @@
   </div>
 
   <!-- Page 2 content -->
-  <div id="Swell & Wind Info" class="tabcontent">
+  <div id="Page2" class="tabcontent">
     <div class="frame-container">
       <div class="frame">
         <iframe src="https://www.nhc.noaa.gov/xgtwo/two_atl_7d0.png"></iframe>
@@ -111,12 +113,19 @@
   </div>
 
   <!-- Page 3 content -->
-  <div id="Other stuff" class="tabcontent">
+  <div id="Page3" class="tabcontent">
     <div class="frame-container">
       <div class="frame">
         <iframe src="https://embed.windy.com/embed2.html?lat=30.162209&amp;lon=-81.355365&amp;detailLat=29.847&amp;detailLon=-81.266&amp;zoom=8&amp;level=surface&amp;overlay=wind&amp;product=ecmwf&amp;menu=&amp;message=true&amp;marker=true&amp;calendar=24&amp;pressure=&amp;type=map&amp;location=coordinates&amp;detail=&amp;metricWind=mph&amp;metricTemp=%C2%B0F&amp;radarRange=-1" allow="autoplay"></iframe>
       </div>
-      <!-- Additional frames can be added here -->
+        <iframe src="https://wave.marineweather.net/itide/tides/png/fl_jacksonville_beach.png"></iframe>
+      </div>
+      <div class="frame">
+        <iframe src="https://embed.windy.com/embed2.html?lat=30.162209&amp;lon=-81.355365&amp;detailLat=29.847&amp;detailLon=-81.266&amp;zoom=8&amp;level=surface&amp;overlay=waves&amp;product=ecmwf&amp;menu=&amp;message=true&amp;marker=true&amp;calendar=24&amp;pressure=&amp;type=map&amp;location=coordinates&amp;detail=&amp;metricWind=mph&amp;metricTemp=%C2%B0F&amp;radarRange=-1" allow="autoplay"></iframe>
+      </div>
+      <div class="frame">
+        <iframe src="https://www.surf-station.com/#tabs-5" allow="autoplay" style="position:relative; top:-10%;"></iframe>
+      </div>
     </div>
   </div>
 
