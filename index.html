@@ -55,9 +55,9 @@
 
 <body>
   <div class="tab">
-    <button class="tablinks" onclick="openPage(event, 'Page 1')">Page 1</button>
-    <button class="tablinks" onclick="openPage(event, 'Page 2')">Page 2</button>
-    <button class="tablinks" onclick="openPage(event, 'PAge 3')">Page 3</button>
+    <button class="tablinks" onclick="openPage(event, 'Page1')">Page 1</button>
+    <button class="tablinks" onclick="openPage(event, 'Page2')">Page 2</button>
+    <button class="tablinks" onclick="openPage(event, 'Page3')">Page 3</button>
   </div>
 
   <!-- Page 1 content -->
@@ -72,27 +72,8 @@
     </div>
     <!-- Frame 3 -->
     <div class="frame">
-      <iframe src="https://g1.ipcamlive.com/player/player.php?alias=plantationbeach&autoplay=1" allow="autoplay" allowfullscreen></iframe>
+      <iframe src="https://g1.ipcamlive.com/player/player.php?alias=plantationbeach&autoplay=1" allow="autoplay"></iframe>
     </div>
-        
-    <!-- Frame 4 -->
-    <div class="frame">
-      <iframe src="https://g1.ipcamlive.com/player/player.php?alias=573b679f95383&autoplay=1" allow="autoplay" allowfullscreen></iframe>
-    </div>
-  </div>
-    
-
-  <!-- Page 2 content -->
-  <div id="Surf Forecast" class="tabcontent">
-    <!-- Frame 5 -->
-    <div class="frame">
-      <iframe src="https://www.nhc.noaa.gov/xgtwo/two_atl_7d0.png"></iframe>
-    </div>
-    <!-- Frame 6 -->
-    <div class="frame">
-      <iframe src="https://wave.marineweather.net/itide/tides/png/fl_jacksonville_beach.png"></iframe>
-    </div>
-    <!-- Frame 7 -->
     <!-- Frame 4 -->
     <div class="frame">
       <link href="//www.surf-forecast.com/stylesheets/widget.css" media="screen" rel="stylesheet" type="text/css" />
@@ -109,6 +90,21 @@
       </div>
     </div>
   </div>
+
+  <!-- Page 2 content -->
+  <div id="Page2" class="tabcontent">
+    <!-- Frame 5 -->
+    <div class="frame">
+      <iframe src="https://www.nhc.noaa.gov/xgtwo/two_atl_7d0.png"></iframe>
+    </div>
+    <!-- Frame 6 -->
+    <div class="frame">
+      <iframe src="https://wave.marineweather.net/itide/tides/png/fl_jacksonville_beach.png"></iframe>
+    </div>
+    <!-- Frame 7 -->
+    <div class="frame">
+      <iframe src="https://embed.windy.com/embed2.html?lat=30.162209&amp;lon=-81.355365&amp;detailLat=29.847&amp;detailLon=-81.266&amp;zoom=8&amp;level=surface&amp;overlay=waves&amp;product=ecmwf&amp;menu=&amp;message=true&amp;marker=true&amp;calendar=24&amp;pressure=&amp;type=map&amp;location=coordinates&amp;detail=&amp;metricWind=mph&amp;metricTemp=%C2%B0F&amp;radarRange=-1" allow="autoplay"></iframe>
+    </div>
     <!-- Frame 8 -->
     <div class="frame">
       <iframe src="https://www.surf-station.com/#tabs-5" allow="autoplay" style="position:relative; top:-10%;"></iframe>
@@ -116,12 +112,12 @@
   </div>
 
   <!-- Page 3 content -->
-  <div id="Wind and Swell Information" class="tabcontent">
+  <div id="Page3" class="tabcontent">
     <!-- Frame 9 -->
     <div class="frame">
       <iframe src="https://embed.windy.com/embed2.html?lat=30.162209&amp;lon=-81.355365&amp;detailLat=29.847&amp;detailLon=-81.266&amp;zoom=8&amp;level=surface&amp;overlay=wind&amp;product=ecmwf&amp;menu=&amp;message=true&amp;marker=true&amp;calendar=24&amp;pressure=&amp;type=map&amp;location=coordinates&amp;detail=&amp;metricWind=mph&amp;metricTemp=%C2%B0F&amp;radarRange=-1" allow="autoplay"></iframe>
     </div>
-      <iframe src="https://embed.windy.com/embed2.html?lat=30.162209&amp;lon=-81.355365&amp;detailLat=29.847&amp;detailLon=-81.266&amp;zoom=8&amp;level=surface&amp;overlay=waves&amp;product=ecmwf&amp;menu=&amp;message=true&amp;marker=true&amp;calendar=24&amp;pressure=&amp;type=map&amp;location=coordinates&amp;detail=&amp;metricWind=mph&amp;metricTemp=%C2%B0F&amp;radarRange=-1" allow="autoplay"></iframe>
+    <!-- Additional frames can be added here -->
   </div>
 
   <script>
