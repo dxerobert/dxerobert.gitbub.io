@@ -143,24 +143,32 @@
         <iframe src="https://www.nhc.noaa.gov/xgtwo/two_atl_7d0.png"></iframe>
     </div>
     
-  <script>
-    function openPage(evt, pageName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(pageName).style.display = "block";
-      evt.currentTarget.className += " active";
+<script>
+  function openPage(evt, pageName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
     }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    var pageElement = document.getElementById(pageName);
+    if (pageElement) {
+      pageElement.style.display = "block";
+    } else {
+      console.error("Page not found:", pageName);
+    }
+    evt.currentTarget.className += " active";
+  }
 
-    // Open the first page by default
+  // Open the first page by default
+  document.addEventListener("DOMContentLoaded", function() {
     document.getElementsByClassName("tablinks")[0].click();
-  </script>
+  });
+</script>
+
 
 </body>
 </html>
