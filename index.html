@@ -55,6 +55,11 @@
       height: 100%;
       border: none;
     }
+
+    .active-tab {
+      outline: 4px solid yellow;
+    }
+
   </style>
   <meta http-equiv="refresh" content="275">
 </head>
@@ -158,16 +163,17 @@
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
+      tablinks[i].classList.remove("active-tab"); // Remove the active-tab class
     }
     document.getElementById(pageName).style.display = "block";
     evt.currentTarget.className += " active";
+    evt.currentTarget.classList.add("active-tab"); // Add the active-tab class to the current tab
   }
 
   document.addEventListener("DOMContentLoaded", function() {
     var tablinks = document.getElementsByClassName("tablinks");
     var currentIndex = 0;
 
-    // Function to cycle through the tabs
     function cycleTabs() {
       if (currentIndex >= tablinks.length) {
         currentIndex = 0;
@@ -176,13 +182,13 @@
       currentIndex++;
     }
 
-    // Automatically cycle through tabs every 45 seconds
     setInterval(cycleTabs, 45000);
 
     // Open the first tab initially
     tablinks[0].click();
   });
 </script>
+
 
 </body>
 </html>
