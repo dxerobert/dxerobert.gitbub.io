@@ -149,24 +149,41 @@
     </div>
   </div>
 
-  <script>
-    function openPage(evt, pageName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+<script>
+  function openPage(evt, pageName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(pageName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var tablinks = document.getElementsByClassName("tablinks");
+    var currentIndex = 0;
+
+    // Function to cycle through the tabs
+    function cycleTabs() {
+      if (currentIndex >= tablinks.length) {
+        currentIndex = 0;
       }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(pageName).style.display = "block";
-      evt.currentTarget.className += " active";
+      tablinks[currentIndex].click();
+      currentIndex++;
     }
 
-    document.addEventListener("DOMContentLoaded", function() {
-      document.getElementsByClassName("tablinks")[0].click();
-    });
-  </script>
+    // Automatically cycle through tabs every 45 seconds
+    setInterval(cycleTabs, 45000);
+
+    // Open the first tab initially
+    tablinks[0].click();
+  });
+</script>
+
 </body>
 </html>
