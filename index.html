@@ -6,17 +6,19 @@
     body {
       margin: 0;
       padding: 0;
+      background-color: black; /* Black background */
+      color: white; /* White text for visibility */
     }
 
     .tab {
       overflow: hidden;
-      background-color: #f1f1f1;
+      background-color: #333; /* Darker tab background for contrast */
     }
 
     .tab button {
       background-color: #0000CD;
       float: left;
-      border: 1px solid #ddd;
+      border: none; /* Cleaner look without border */
       outline: none;
       cursor: pointer;
       padding: 14px 16px;
@@ -33,8 +35,9 @@
     .tabcontent {
       display: none;
       padding: 6px 12px;
-      border: 1px solid #ccc;
+      border: 1px solid #444; /* Slightly lighter border for visibility */
       border-top: none;
+      background-color: #222; /* Dark background for content */
       width: 100vw;
       height: 100vh;
     }
@@ -67,19 +70,15 @@
   <div id="Page1" class="tabcontent">
     <!-- Frames for Page 1 -->
     <div class="frame">
-      <!-- Frame 1 -->
       <iframe width="687" height="464" src="https://www.youtube.com/embed/b217WQb2WfM" title="Live From The Best Western / Jacksonville Beach Pier Cam" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="frame">
-      <!-- Frame 2 -->
       <iframe loading="lazy" title="JAX" width="1200" height="675" src="https://www.youtube.com/embed/Iu2_v4M8n6Q?feature=oembed" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="frame">
-      <!-- Frame 3 -->
       <iframe src="https://g1.ipcamlive.com/player/player.php?alias=plantationbeach&autoplay=1" allow="autoplay"></iframe>
     </div>
     <div class="frame">
-      <!-- Frame 4 -->
       <iframe src="https://ipcamlive.com/player/player.php?alias=573b679f95383&autoplay=1" allow="autoplay"></iframe>
     </div>
   </div>
@@ -87,23 +86,15 @@
   <div id="Page2" class="tabcontent">
     <!-- Frames for Page 2 -->
     <div class="frame">
-      <!-- Frame 5 -->
-      <!-- Surf Forecast Widget -->
       <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Wilderness/forecasts/widget/i" frameborder="0"></iframe>
     </div>
     <div class="frame">
-      <!-- Frame 6 -->
-      <!-- Surf Forecast Widget -->
       <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Satellite-Beach/forecasts/widget/i" frameborder="0"></iframe>
     </div>
     <div class="frame">
-      <!-- Frame 7 -->
-      <!-- Surf Forecast Widget -->
       <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Fernandina-Beach-Pier/forecasts/widget/i" frameborder="0"></iframe>
     </div>
     <div class="frame">
-      <!-- Frame 8 -->
-      <!-- Surf Forecast Widget -->
       <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Crossroads-1/forecasts/widget/i" frameborder="0"></iframe>
     </div>
   </div>
@@ -111,19 +102,15 @@
   <div id="Page3" class="tabcontent">
     <!-- Frames for Page 3 -->
     <div class="frame">
-      <!-- Frame 9 -->
       <iframe width="650" height="450" src="https://embed.windy.com/embed2.html?lat=29.550&lon=-80.329&zoom=7&level=surface&overlay=wind" frameborder="0"></iframe>
     </div>
     <div class="frame">
-      <!-- Frame 10 -->
       <iframe src="https://embed.windy.com/embed2.html?lat=30.162209&lon=-81.355365&zoom=8&level=surface&overlay=waves" allow="autoplay"></iframe>
     </div>
     <div class="frame">
-      <!-- Frame 11 -->
       <iframe src="https://embed.windy.com/embed2.html?lat=30.162209&lon=-81.355365&zoom=8&level=surface&overlay=swell" allow="autoplay"></iframe>
     </div>
     <div class="frame">
-      <!-- Frame 12 -->
       <iframe width="650" height="450" src="https://embed.windy.com/embed2.html?lat=30.122&lon=-81.363&zoom=5&level=surface&overlay=radar" frameborder="0"></iframe>
     </div>
   </div>
@@ -131,49 +118,35 @@
   <div id="Page4" class="tabcontent">
     <!-- Frames for Page 4 -->
     <div class="frame">
-      <!-- Frame 9 -->
-      <iframe src="https://embed.windy.com/embed2.html?lat=39.707&lon=-77.959&detailLat=39.707&detailLon=-77.959&width=650&height=450&zoom=4&level=surface&overlay=capAlerts&product=capAlerts&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=mph&metricTemp=%C2%B0F&radarRange=-1"
-        frameborder="0"></iframe>
+      <iframe src="https://embed.windy.com/embed2.html?lat=39.707&lon=-77.959&detailLat=39.707&detailLon=-77.959&width=650&height=450&zoom=4&level=surface&overlay=capAlerts&product=capAlerts&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=mph&metricTemp=%C2%B0F&radarRange=-1" frameborder="0"></iframe>
     </div>
     <div class="frame">
-      <!-- Frame 10 -->
-<iframe src="https://embed.windy.com/embed2.html?lat=29.841&lon=-84.177&detailLat=29.841&detailLon=-84.177&width=650&height=450&zoom=5&level=surface&overlay=sst&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=true&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>        frameborder="0"></iframe>    </div>
+      <iframe src="https://embed.windy.com/embed2.html?lat=29.841&lon=-84.177&detailLat=29.841&detailLon=-84.177&width=650&height=450&zoom=5&level=surface&overlay=sst&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=true&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
+    </div>
     <div class="frame">
-      <!-- Frame 11 -->
-<iframe src="https://embed.windy.com/embed2.html?lat=29.907&lon=-80.848&detailLat=29.841&detailLon=-84.177&width=650&height=450&zoom=8&level=surface&overlay=sst&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=true&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>     </div>
+      <iframe src="https://embed.windy.com/embed2.html?lat=29.907&lon=-80.848&detailLat=29.841&detailLon=-84.177&width=650&height=450&zoom=8&level=surface&overlay=sst&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=true&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
+    </div>
     <div class="frame">
-      <!-- Frame 12 -->
-      <iframe src=https://www.nhc.noaa.gov/xgtwo/two_atl_7d0.png></iframe>
+      <iframe src="https://www.nhc.noaa.gov/xgtwo/two_atl_7d0.png"></iframe>
     </div>
   </div>
 
   <div id="Page5" class="tabcontent">
-    <!-- Frames for Page 2 -->
+    <!-- Frames for Page 5 -->
     <div class="frame">
-      <!-- Frame 5 -->
-      <!-- Surf Forecast Widget -->
       <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Wilderness/forecasts/widget/i" frameborder="0"></iframe>
     </div>
     <div class="frame">
-      <!-- Frame 6 -->
-      <!-- Surf Forecast Widget -->
       <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Satellite-Beach/forecasts/widget/i" frameborder="0"></iframe>
     </div>
     <div class="frame">
-      <!-- Frame 7 -->
-      <!-- Surf Forecast Widget -->
       <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Fernandina-Beach-Pier/forecasts/widget/i" frameborder="0"></iframe>
     </div>
     <div class="frame">
-      <!-- Frame 8 -->
-      <!-- Surf Forecast Widget -->
       <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Crossroads-1/forecasts/widget/i" frameborder="0"></iframe>
     </div>
   </div>
 
-  
-  <!-- Other content for Page 4 and Page 5 is similar to above, with frames and iframe contents -->
-  
   <script>
     function openPage(evt, pageName) {
       var i, tabcontent, tablinks;
