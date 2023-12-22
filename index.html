@@ -71,6 +71,8 @@
     <button class="tablinks" onclick="openPage(event, 'Page4')">Tides, Sunrise/Sunset, Sea Temps. & Weather Outlook</button>
     <button class="tablinks" onclick="openPage(event, 'Page5')">Other Surf Spots Forecasts</button>
     <button class="tablinks" onclick="openPage(event, 'Page6')">The Frenchman's Page...</button>
+    <button class="tablinks" onclick="openPage(event, 'Page7')">StAug Bouy Data</button>
+
   </div>
 
   <div id="Page1" class="tabcontent">
@@ -178,6 +180,68 @@
     </div>
     <div class="frame">
       <iframe loading="lazy" title="North Vilano" width="1200" height="675" src="https://www.youtube.com/embed/SOBqGul1RiE?feature=oembed&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+    <div id="Page7" class="tabcontent">
+    <!-- Frames for Page 5 -->
+    <div class="frame">
+      <script>
+          function fetchAndDisplayOceanData() {
+              fetch('https://www.ndbc.noaa.gov/data/realtime2/41002.txt')
+                  .then(response => response.text())
+                  .then(data => {
+                      const lines = data.split('\n');
+                      const frame = document.getElementById('ocean-data-frame');
+                      const table = document.createElement('table');
+                      table.innerHTML = `
+                          <tr>
+                              <th>Date & Time</th>
+                              <th>WDIR (°)</th>
+                              <th>WSPD (m/s)</th>
+                              <th>GST (m/s)</th>
+                              <th>WVHT (m)</th>
+                              <th>DPD (sec)</th>
+                              <th>APD (sec)</th>
+                              <th>MWD (°)</th>
+                              <th>WTMP (°C)</th>
+                          </tr>
+                      `;
+      
+                      for (let i = 0; i < 30; i++) {
+                          const cols = lines[i].trim().split(/\s+/);
+                          const row = document.createElement('tr');
+                          row.innerHTML = `
+                              <td>${cols[0]}-${cols[1]}-${cols[2]} ${cols[3]}:${cols[4]}</td>
+                              <td>${cols[5]}</td>
+                              <td>${cols[6]}</td>
+                              <td>${cols[7]}</td>
+                              <td>${cols[8] !== 'MM' ? cols[8] : 'N/A'}</td>
+                              <td>${cols[9] !== 'MM' ? cols[9] : 'N/A'}</td>
+                              <td>${cols[10] !== 'MM' ? cols[10] : 'N/A'}</td>
+                              <td>${cols[11] !== 'MM' ? cols[11] : 'N/A'}</td>
+                              <td>${cols[12]}</td>
+                          `;
+                          table.appendChild(row);
+                      }
+      
+                      frame.appendChild(table);
+                  })
+                  .catch(error => console.error('Error fetching data:', error));
+          }
+      
+          // Call the function to fetch and display data
+          fetchAndDisplayOceanData();
+      </script>
+    </div>
+    <div class="frame">
+      <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Playa-Negra/forecasts/widget/i" frameborder="0"></iframe>
+    </div>
+    <div class="frame">
+      <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Spanish-House/forecasts/widget/i" frameborder="0"></iframe>
+    </div>
+    <div class="frame">
+      <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Flagler-Pier/forecasts/widget/i" frameborder="0"></iframe>
     </div>
   </div>
   
