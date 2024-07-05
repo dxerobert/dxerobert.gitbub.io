@@ -9,12 +9,10 @@
       background-color: black; /* Black background */
       color: white; /* White text for visibility */
     }
-
     .tab {
       overflow: hidden;
       background-color: #333; /* Darker tab background for contrast */
     }
-
     .tab button {
       background-color: #0000CD;
       float: left;
@@ -27,11 +25,9 @@
       border-radius: 5px;
       margin-right: 5px;
     }
-
     .tab button:hover {
       background-color: #4682B4;
     }
-
     .tabcontent {
       display: none;
       padding: 6px 12px;
@@ -41,7 +37,6 @@
       width: 100vw;
       height: 100vh;
     }
-
     .frame {
       float: left;
       width: 50%;
@@ -49,17 +44,14 @@
       box-sizing: border-box;
       padding: 4px;
     }
-
     .frame iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
-
     .active-tab {
       outline: 2px solid yellow;
     }
-
   </style>
   <meta http-equiv="refresh" content="275">
 </head>
@@ -72,9 +64,7 @@
     <button class="tablinks" onclick="openPage(event, 'Page5')">Other Surf Spots Forecasts</button>
     <button class="tablinks" onclick="openPage(event, 'Page6')">The Frenchman's Page...</button>
     <button class="tablinks" onclick="openPage(event, 'Page7')">StAug Bouy Data</button>
-
   </div>
-
   <div id="Page1" class="tabcontent">
     <!-- Frames for Page 1 -->
     <div class="frame">
@@ -86,10 +76,10 @@
     <div class="frame">
       <iframe src="https://g1.ipcamlive.com/player/player.php?alias=plantationbeach&autoplay=1" allow="autoplay"></iframe>
     </div>
+    <div class="frame">
       <iframe loading="lazy" title="North Vilano" width="1200" height="675" src="https://www.youtube.com/embed/SOBqGul1RiE?feature=oembed&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
-
   <div id="Page2" class="tabcontent">
     <!-- Frames for Page 2 -->
     <div class="frame">
@@ -105,7 +95,6 @@
       <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Crossroads-1/forecasts/widget/i" frameborder="0"></iframe>
     </div>
   </div>
-
   <div id="Page3" class="tabcontent">
     <!-- Frames for Page 3 -->
     <div class="frame">
@@ -115,9 +104,7 @@
       <iframe src="https://embed.windy.com/embed2.html?lat=29.306&lon=-81.563&detailLat=27.956&detailLon=-74.971&width=650&height=450&zoom=4&level=surface&overlay=swell1&product=ecmwfWaves&menu=&message=true&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1"
         frameborder="0"></iframe>    </div>
     <div class="frame">
-
       <iframe src="https://www.nhc.noaa.gov/xgtwo/two_atl_7d0.png"></iframe>
-
      <!-- <iframe src="https://embed.windy.com/embed2.html?lat=29.960&lon=-81.271&detailLat=29.841&detailLon=-84.177&width=650&height=450&zoom=9&level=surface&overlay=waves&product=ecmwfWaves&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe> -->   
     </div>   
     
@@ -125,7 +112,6 @@
       <iframe src="https://embed.windy.com/embed2.html?lat=30.122&lon=-81.363&zoom=5&level=surface&overlay=radar" frameborder="0"></iframe>
     </div>
   </div>
-
   <div id="Page4" class="tabcontent">
     <!-- Frames for Page 4 -->
     <div class="frame">
@@ -143,7 +129,6 @@
    
     </div>
   </div>
-
   <div id="Page5" class="tabcontent">
     <!-- Frames for Page 5 -->
     <div class="frame">
@@ -159,7 +144,6 @@
       <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Flagler-Pier/forecasts/widget/i" frameborder="0"></iframe>
     </div>
   </div>
-
   <div id="Page6" class="tabcontent">
     <!-- Frames for Page 1 -->
     <div class="frame">
@@ -169,12 +153,23 @@
       <iframe loading="lazy" title="JAX" width="1200" height="675" src="https://www.youtube.com/embed/Iu2_v4M8n6Q?feature=oembed&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="frame">
+        <script id="wg_fwdg_265_3_1702928382975">
+        (function (window, document) {
+          var loader = function () {
+            var arg = ["s=265" ,"m=3","mw=84","uid=wg_fwdg_265_3_1702928382975" ,"wj=mph" ,"tj=f" ,"waj=ft" ,"tij=ft" ,"odh=0" ,"doh=24" ,"fhours=240" ,"hrsm=3" ,"vt=forecasts" ,"lng=en" ,"p=WINDSPD,GUST,MWINDSPD,SMER,TMPE,FLHGT,CDC,APCP1s,RATING"];
+            var script = document.createElement("script");
+            var tag = document.getElementsByTagName("script")[0];
+            script.src = "https://www.windguru.cz/js/widget.php?"+(arg.join("&"));
+            tag.parentNode.insertBefore(script, tag);
+          };
+          window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
+        })(window, document);
+        </script>
     </div>
     <div class="frame">
       <iframe loading="lazy" title="North Vilano" width="1200" height="675" src="https://www.youtube.com/embed/SOBqGul1RiE?feature=oembed&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
-
     <div id="Page7" class="tabcontent">
     <!-- Frames for Page 5 -->
     <div class="frame">
@@ -253,11 +248,9 @@
     evt.currentTarget.className += " active";
     evt.currentTarget.classList.add("active-tab"); // Add the active-tab class to the current tab
   }
-
   document.addEventListener("DOMContentLoaded", function() {
     var tablinks = document.getElementsByClassName("tablinks");
     var currentIndex = 0;
-
     function cycleTabs() {
       if (currentIndex >= tablinks.length) {
         currentIndex = 0;
@@ -265,14 +258,10 @@
       tablinks[currentIndex].click();
       currentIndex++;
     }
-
     setInterval(cycleTabs, 120000);
-
     // Open the first tab initially
     tablinks[0].click();
   });
 </script>
-
-
 </body>
 </html>
