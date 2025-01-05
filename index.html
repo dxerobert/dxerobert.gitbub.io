@@ -36,13 +36,25 @@
       background-color: #222; /* Dark background for content */
       width: 100vw;
       height: 100vh;
+      box-sizing: border-box; /* Include padding and border in element's total width and height */
+      overflow: auto; /* Allow scrolling if content is larger than container */
+    }
+    .frame-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* 2 columns for equal distribution */
+      grid-template-rows: 1fr 1fr; /* 2 rows for equal distribution */
+      grid-gap: 10px; /* Space between frames */
+      justify-items: center; /* Center each frame */
+      align-items: center; /* Center each frame vertically */
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
     }
     .frame {
-      float: left;
-      width: 50%;
-      height: 50%;
+      width: 687px;
+      height: 464px;
+      overflow: hidden;
       box-sizing: border-box;
-      padding: 4px;
     }
     .frame iframe {
       width: 100%;
@@ -65,97 +77,108 @@
     <button class="tablinks" onclick="openPage(event, 'Page6')">The Frenchman's Page...</button>
     <button class="tablinks" onclick="openPage(event, 'Page7')">StAug Bouy Data</button>
   </div>
-<div id="Page1" class="tabcontent">
+
+  <div id="Page1" class="tabcontent">
     <!-- Container for Frames -->
     <div class="frame-container">
         <!-- Individual Frames -->
         <div class="frame">
-            <iframe src="https://rtsp.me/embed/GbZKGYKz/;subtype=1?autoplay=1&muted=1" allowfullscreen width="100%" height="100%" frameborder="0" style="border:0" allow="autoplay; encrypted-media"></iframe>
+            <iframe src="https://rtsp.me/embed/GbZKGYKz/;subtype=1?autoplay=1&muted=1" allowfullscreen allow="autoplay; encrypted-media"></iframe>
         </div>
         <div class="frame">
-            <iframe style="border: none; overflow: hidden; width: 100%; height: 100%;" src="https://camstreamer.com/embed/Cwyc610HmMb53lJKweotlAb3biST7WgGWXfc8nd8" allowfullscreen="allowfullscreen"></iframe>
+            <iframe src="https://camstreamer.com/embed/Cwyc610HmMb53lJKweotlAb3biST7WgGWXfc8nd8" allowfullscreen="allowfullscreen"></iframe>
         </div>
         <div class="frame">
-            <iframe src="https://r63821w151.execute-api.us-east-2.amazonaws.com/prod/conditions?swell_station=41117&wind_station=SAUF1&format=html" width="100%" height="100%" allow="autoplay"></iframe>
+            <iframe src="https://r63821w151.execute-api.us-east-2.amazonaws.com/prod/conditions?swell_station=41117&wind_station=SAUF1&format=html" allow="autoplay"></iframe>
         </div>
         <div class="frame">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/SOBqGul1RiE?feature=oembed&autoplay=1&mute=1" title="Live From The Best Western / Jacksonville Beach Pier Cam" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/SOBqGul1RiE?feature=oembed&autoplay=1&mute=1" title="Live From The Best Western / Jacksonville Beach Pier Cam" allowfullscreen></iframe>
         </div>
     </div>
-</div>
+  </div>
+
   <div id="Page2" class="tabcontent">
     <!-- Frames for Page 2 -->
-    <div class="frame">
-      <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/The-Mayport-Poles/forecasts/widget/i" frameborder="0"></iframe>
-    </div>
-    <div class="frame">
-      <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Middle-Access/forecasts/widget/i" frameborder="0"></iframe>
-    </div>
-    <div class="frame">
-      <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Fernandina-Beach-Pier/forecasts/widget/i" frameborder="0"></iframe>
-    </div>
-    <div class="frame">
-      <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Crossroads-1/forecasts/widget/i" frameborder="0"></iframe>
+    <div class="frame-container">
+      <div class="frame">
+        <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/The-Mayport-Poles/forecasts/widget/i" frameborder="0"></iframe>
+      </div>
+      <div class="frame">
+        <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Middle-Access/forecasts/widget/i" frameborder="0"></iframe>
+      </div>
+      <div class="frame">
+        <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Fernandina-Beach-Pier/forecasts/widget/i" frameborder="0"></iframe>
+      </div>
+      <div class="frame">
+        <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Crossroads-1/forecasts/widget/i" frameborder="0"></iframe>
+      </div>
     </div>
   </div>
+
   <div id="Page3" class="tabcontent">
     <!-- Frames for Page 3 -->
-    <div class="frame">
-      <iframe width="650" height="450" src="https://embed.windy.com/embed2.html?lat=29.550&lon=-80.329&zoom=7&level=surface&overlay=wind" frameborder="0"></iframe>
-    </div>
-    <div class="frame">
-      <iframe src="https://embed.windy.com/embed2.html?lat=29.306&lon=-81.563&detailLat=27.956&detailLon=-74.971&width=650&height=450&zoom=4&level=surface&overlay=swell1&product=ecmwfWaves&menu=&message=true&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1"
-        frameborder="0"></iframe>    </div>
-    <div class="frame">
-      <iframe src="https://www.nhc.noaa.gov/xgtwo/two_atl_7d0.png"></iframe>
-     <!-- <iframe src="https://embed.windy.com/embed2.html?lat=29.960&lon=-81.271&detailLat=29.841&detailLon=-84.177&width=650&height=450&zoom=9&level=surface&overlay=waves&product=ecmwfWaves&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe> -->   
-    </div>   
-    
-    <div class="frame">
-      <iframe src="https://embed.windy.com/embed2.html?lat=30.122&lon=-81.363&zoom=5&level=surface&overlay=radar" frameborder="0"></iframe>
+    <div class="frame-container">
+      <div class="frame">
+        <iframe src="https://embed.windy.com/embed2.html?lat=29.550&lon=-80.329&zoom=7&level=surface&overlay=wind" frameborder="0"></iframe>
+      </div>
+      <div class="frame">
+        <iframe src="https://embed.windy.com/embed2.html?lat=29.306&lon=-81.563&detailLat=27.956&detailLon=-74.971&zoom=4&level=surface&overlay=swell1&product=ecmwfWaves" frameborder="0"></iframe>
+      </div>
+      <div class="frame">
+        <iframe src="https://www.nhc.noaa.gov/xgtwo/two_atl_7d0.png"></iframe>
+      </div>
+      <div class="frame">
+        <iframe src="https://embed.windy.com/embed2.html?lat=30.122&lon=-81.363&zoom=5&level=surface&overlay=radar" frameborder="0"></iframe>
+      </div>
     </div>
   </div>
+
   <div id="Page4" class="tabcontent">
     <!-- Frames for Page 4 -->
-    <div class="frame">
-      <iframe src="https://embed.windy.com/embed2.html?lat=39.707&lon=-77.959&detailLat=39.707&detailLon=-77.959&width=650&height=450&zoom=4&level=surface&overlay=capAlerts&product=capAlerts&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=mph&metricTemp=%C2%B0F&radarRange=-1" frameborder="0"></iframe>
-    </div>
-    <div class="frame">
-      <iframe src="https://embed.windy.com/embed2.html?lat=29.960&lon=-81.271&detailLat=29.841&detailLon=-84.177&width=650&height=450&zoom=9&level=surface&overlay=waves&product=ecmwfWaves&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
-    </div>
-    <div class="frame">
-      <script src="https://www.tidespro.com/scripts/8619410eb9f74c0eb10bdbde66f828fb/tidetableweekswitcher/us/florida/jacksonville-beach"></script>
-    </div>
-    <div class="frame">
-     <!-- <iframe src="https://www.nhc.noaa.gov/xgtwo/two_atl_7d0.png"></iframe>-->
-      <iframe width="700" height="500" class="mb-3" src="https://sunsetsunrisetime.com/widget.php?newdb=true&amp;idcity=20380&amp;days=7&amp;text=054871"></iframe>
-   
+    <div class="frame-container">
+      <div class="frame">
+        <iframe src="https://embed.windy.com/embed2.html?lat=39.707&lon=-77.959&zoom=4&level=surface&overlay=capAlerts&product=capAlerts" frameborder="0"></iframe>
+      </div>
+      <div class="frame">
+        <iframe src="https://embed.windy.com/embed2.html?lat=29.960&lon=-81.271&detailLat=29.841&detailLon=-84.177&zoom=9&level=surface&overlay=waves&product=ecmwfWaves" frameborder="0"></iframe>
+      </div>
+      <div class="frame">
+        <script src="https://www.tidespro.com/scripts/8619410eb9f74c0eb10bdbde66f828fb/tidetableweekswitcher/us/florida/jacksonville-beach"></script>
+      </div>
+      <div class="frame">
+        <iframe width="700" height="500" src="https://sunsetsunrisetime.com/widget.php?newdb=true&amp;idcity=20380&amp;days=7&amp;text=054871"></iframe>
+      </div>
     </div>
   </div>
+
   <div id="Page5" class="tabcontent">
     <!-- Frames for Page 5 -->
-    <div class="frame">
-      <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Wilderness/forecasts/widget/i" frameborder="0"></iframe>
-    </div>
-    <div class="frame">
-      <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Playa-Negra/forecasts/widget/i" frameborder="0"></iframe>
-    </div>
-    <div class="frame">
-      <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Spanish-House/forecasts/widget/i" frameborder="0"></iframe>
-    </div>
-    <div class="frame">
-      <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Flagler-Pier/forecasts/widget/i" frameborder="0"></iframe>
+    <div class="frame-container">
+      <div class="frame">
+        <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Wilderness/forecasts/widget/i" frameborder="0"></iframe>
+      </div>
+      <div class="frame">
+        <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Playa-Negra/forecasts/widget/i" frameborder="0"></iframe>
+      </div>
+      <div class="frame">
+        <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Spanish-House/forecasts/widget/i" frameborder="0"></iframe>
+      </div>
+      <div class="frame">
+        <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Flagler-Pier/forecasts/widget/i" frameborder="0"></iframe>
+      </div>
     </div>
   </div>
+
   <div id="Page6" class="tabcontent">
-    <!-- Frames for Page 1 -->
-    <div class="frame">
-      <iframe width="687" height="464" src="https://www.youtube.com/embed/H2q_DJc33kg?feature=oembed&autoplay=1&mute=1" title="Live St. Augustine Pier Southside Surf Cam" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="frame">
-      <iframe loading="lazy" title="JAX" width="1200" height="675" src="https://www.youtube.com/embed/Iu2_v4M8n6Q?feature=oembed&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="frame">
+    <!-- Frames for Page 6 -->
+    <div class="frame-container">
+      <div class="frame">
+        <iframe src="https://www.youtube.com/embed/H2q_DJc33kg?feature=oembed&autoplay=1&mute=1" title="Live St. Augustine Pier Southside Surf Cam" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="frame">
+        <iframe src="https://www.youtube.com/embed/Iu2_v4M8n6Q?feature=oembed&autoplay=1&mute=1" title="JAX" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="frame">
         <script id="wg_fwdg_265_3_1702928382975">
         (function (window, document) {
           var loader = function () {
@@ -168,15 +191,18 @@
           window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
         })(window, document);
         </script>
-    </div>
-    <div class="frame">
-      <iframe loading="lazy" title="North Vilano" width="1200" height="675" src="https://www.youtube.com/embed/SOBqGul1RiE?feature=oembed&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="frame">
+        <iframe src="https://www.youtube.com/embed/SOBqGul1RiE?feature=oembed&autoplay=1&mute=1" title="North Vilano" frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
-    <div id="Page7" class="tabcontent">
-    <!-- Frames for Page 5 -->
-    <div class="frame">
-      <script>
+
+  <div id="Page7" class="tabcontent">
+    <!-- Frames for Page 7 -->
+    <div class="frame-container">
+      <div class="frame">
+        <script>
           function fetchAndDisplayOceanData() {
               fetch('https://www.ndbc.noaa.gov/data/realtime2/41002.txt')
                   .then(response => response.text())
@@ -222,15 +248,18 @@
       
           // Call the function to fetch and display data
           fetchAndDisplayOceanData();
-      </script>
-    </div>
-    <div class="frame">
-      <script src="https://www.windfinder.com/widget/forecast/js/jacksonville_beach?unit_wave=ft&unit_rain=in&unit_temperature=f&unit_wind=mph&unit_pressure=mbar&days=4&show_day=1"></script><noscript><a rel="nofollow" href="https://www.windfinder.com/forecast/jacksonville_beach?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast">Wind forecast for Jacksonville Beach (Tide)</a> provided by <a rel="nofollow" href="https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo">windfinder.com</a></noscript>    </div>
-    <div class="frame">
-      <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Spanish-House/forecasts/widget/i" frameborder="0"></iframe>
-    </div>
-    <div class="frame">
-      <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Flagler-Pier/forecasts/widget/i" frameborder="0"></iframe>
+        </script>
+      </div>
+      <div class="frame">
+        <script src="https://www.windfinder.com/widget/forecast/js/jacksonville_beach?unit_wave=ft&unit_rain=in&unit_temperature=f&unit_wind=mph&unit_pressure=mbar&days=4&show_day=1"></script>
+        <noscript><a rel="nofollow" href="https://www.windfinder.com/forecast/jacksonville_beach?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast">Wind forecast for Jacksonville Beach (Tide)</a> provided by <a rel="nofollow" href="https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo">windfinder.com</a></noscript>
+      </div>
+      <div class="frame">
+        <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Spanish-House/forecasts/widget/i" frameborder="0"></iframe>
+      </div>
+      <div class="frame">
+        <iframe class="surf-fc-i" allowtransparency="true" src="//www.surf-forecast.com/breaks/Flagler-Pier/forecasts/widget/i" frameborder="0"></iframe>
+      </div>
     </div>
   </div>
   
